@@ -1,52 +1,50 @@
 {
-  "info":{
-    "_postman_id":"4945a481-1d1a-4a65-8ac8-bb85823c8cbd",
-    "name":"RaboAISPCollection",
-    "schema":"https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  "info": {
+    "_postman_id": "4945a481-1d1a-4a65-8ac8-bb85823c8cbd",
+    "name": "RaboAISPCollection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
-  "item":[
+  "item": [
     {
-      "name":"POST_TRANSACTIONS",
-      "id":"9794e677-53ac-4697-97a8-a2ca1c573aa7",
-      "request":{
-        "method":"POST",
-        "header":[
+      "name": "POST_TRANSACTIONS",
+      "id": "9794e677-53ac-4697-97a8-a2ca1c573aa7",
+      "request": {
+        "method": "POST",
+        "header": [
           {
-            "key":"Content-Type",
-            "value":"application/json",
-            "type":"text"
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
           }
         ],
-        "body":{
-          "mode":"raw",
-          "raw":"\n    {\n        \"transactionType\": \"DEBIT\",\n        \"transactionAmount\": \"100\",\n        \"lastName\": \"Singh\",\n        \"toAccountNumber\": \"NL771234124314\"\n    }\n"
+        "body": {
+          "mode": "raw",
+          "raw": "\n    {\n        \"transactionType\": \"DEBIT\",\n        \"transactionAmount\": \"100\",\n        \"lastName\": \"Singh\",\n        \"toAccountNumber\": \"NL771234124314\"\n    }\n"
         },
-        "url":"http://localhost:8080/api/open-banking/v1.0/users/1/accounts/1/transactions"
+        "url": "http://localhost:8080/api/open-banking/v1.0/users/1/accounts/1/transactions"
       },
-      "response":[
-
-      ]
+      "response": []
     },
     {
-      "name":"GET_TRANSACTIONS",
-      "id":"b8c6ad9f-3591-4f4b-8168-e1c98a7224a9",
-      "request":{
-        "method":"GET",
-        "header":[
+      "name": "GET_TRANSACTIONS",
+      "id": "b8c6ad9f-3591-4f4b-8168-e1c98a7224a9",
+      "request": {
+        "method": "GET",
+        "header": [
           {
-            "key":"Content-Type",
-            "value":"application/json",
-            "type":"text"
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
           }
         ],
-        "url":{
-          "raw":"http://localhost:8080/api/open-banking/v1.0/users/1/accounts/1/transactions?fromDate=01.01.2021&toDate=01.12.2022",
-          "protocol":"http",
-          "host":[
+        "url": {
+          "raw": "http://localhost:8080/api/open-banking/v1.0/users/1/accounts/1/transactions?fromDate=01.01.2021&toDate=01.12.2022",
+          "protocol": "http",
+          "host": [
             "localhost"
           ],
-          "port":"8080",
-          "path":[
+          "port": "8080",
+          "path": [
             "api",
             "open-banking",
             "v1.0",
@@ -56,207 +54,233 @@
             "1",
             "transactions"
           ],
-          "query":[
+          "query": [
             {
-              "key":"fromDate",
-              "value":"01.01.2021"
+              "key": "fromDate",
+              "value": "01.01.2021"
             },
             {
-              "key":"toDate",
-              "value":"01.12.2022"
+              "key": "toDate",
+              "value": "01.12.2022"
             }
           ]
         }
       },
-      "response":[
-
-      ]
+      "response": []
     },
     {
-      "name":"GET_ACCOUNT_BALANCE",
-      "id":"9def5779-7367-45f2-b7f1-7e866a5fa525",
-      "protocolProfileBehavior":{
-        "disableBodyPruning":true
+      "name": "GET_ACCOUNT_BALANCE",
+      "id": "9def5779-7367-45f2-b7f1-7e866a5fa525",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
       },
-      "request":{
-        "method":"GET",
-        "header":[
+      "request": {
+        "method": "GET",
+        "header": [
           {
-            "key":"Content-Type",
-            "value":"application/json",
-            "type":"text"
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
           }
         ],
-        "body":{
-          "mode":"raw",
-          "raw":"\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
+        "body": {
+          "mode": "raw",
+          "raw": "\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
         },
-        "url":"http://localhost:8080/api/open-banking/v1.0/users/1/accounts/1/balances"
+        "url": "http://localhost:8080/api/open-banking/v1.0/users/1/accounts/1/balances"
       },
-      "response":[
-
-      ]
+      "response": []
     },
     {
-      "name":"GET_USER_BALANCES",
-      "id":"c8dd28b3-3e5f-4933-85c1-f7936005b6f4",
-      "protocolProfileBehavior":{
-        "disableBodyPruning":true
+      "name": "GET_USER_BALANCES",
+      "id": "c8dd28b3-3e5f-4933-85c1-f7936005b6f4",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
       },
-      "request":{
-        "method":"GET",
-        "header":[
+      "request": {
+        "method": "GET",
+        "header": [
           {
-            "key":"Content-Type",
-            "value":"application/json",
-            "type":"text"
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
           }
         ],
-        "body":{
-          "mode":"raw",
-          "raw":"\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
+        "body": {
+          "mode": "raw",
+          "raw": "\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
         },
-        "url":"http://localhost:8080/api/open-banking/v1.0/users/1/balances"
+        "url": "http://localhost:8080/api/open-banking/v1.0/users/1/balances"
       },
-      "response":[
-
-      ]
+      "response": []
     },
     {
-      "name":"GET_ALL_ACCOUNT_BALANCES",
-      "id":"8acf4966-3e37-43b7-a50f-7708c6f1b248",
-      "protocolProfileBehavior":{
-        "disableBodyPruning":true
+      "name": "GET_USER_CARDS",
+      "id": "b150d54e-9bc4-4cc6-a7b9-08c2e48b54f1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
       },
-      "request":{
-        "method":"GET",
-        "header":[
+      "request": {
+        "method": "GET",
+        "header": [
           {
-            "key":"Content-Type",
-            "value":"application/json",
-            "type":"text"
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
           }
         ],
-        "body":{
-          "mode":"raw",
-          "raw":"\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
+        "body": {
+          "mode": "raw",
+          "raw": "\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
         },
-        "url":"http://localhost:8080/api/open-banking/v1.0/accounts/balances"
+        "url": "http://localhost:8080/api/open-banking/v1.0/users/1/cards"
       },
-      "response":[
-
-      ]
+      "response": []
     },
     {
-      "name":"GET_USER_ACCOUNTS",
-      "id":"b45b060e-85e9-461a-a7a9-4e3d141c9c7b",
-      "protocolProfileBehavior":{
-        "disableBodyPruning":true
+      "name": "GET_USER_ACCOUNT_CARDS Copy",
+      "id": "6670e0cf-e51c-443c-85ff-cb27745ba358",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
       },
-      "request":{
-        "method":"GET",
-        "header":[
+      "request": {
+        "method": "GET",
+        "header": [
           {
-            "key":"Content-Type",
-            "value":"application/json",
-            "type":"text"
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
           }
         ],
-        "body":{
-          "mode":"raw",
-          "raw":"\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
+        "body": {
+          "mode": "raw",
+          "raw": "\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
         },
-        "url":"http://localhost:8080/api/open-banking/v1.0/users/1/accounts"
+        "url": "http://localhost:8080/api/open-banking/v1.0/users/1/accounts/1/cards"
       },
-      "response":[
-
-      ]
+      "response": []
     },
     {
-      "name":"GET_USERS",
-      "id":"1aa1857e-3a59-4de9-80e6-8cc65974250e",
-      "protocolProfileBehavior":{
-        "disableBodyPruning":true
+      "name": "GET_ALL_ACCOUNT_BALANCES",
+      "id": "8acf4966-3e37-43b7-a50f-7708c6f1b248",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
       },
-      "request":{
-        "method":"GET",
-        "header":[
+      "request": {
+        "method": "GET",
+        "header": [
           {
-            "key":"Content-Type",
-            "value":"application/json",
-            "type":"text"
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
           }
         ],
-        "body":{
-          "mode":"raw",
-          "raw":"\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
+        "body": {
+          "mode": "raw",
+          "raw": "\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
         },
-        "url":"http://localhost:8080/api/open-banking/v1.0/users"
+        "url": "http://localhost:8080/api/open-banking/v1.0/accounts/balances"
       },
-      "response":[
-
-      ]
+      "response": []
     },
     {
-      "name":"GET_USER",
-      "id":"82b9d7ae-ef08-44cf-8c7c-39712a581c0d",
-      "protocolProfileBehavior":{
-        "disableBodyPruning":true
+      "name": "GET_USER_ACCOUNTS",
+      "id": "b45b060e-85e9-461a-a7a9-4e3d141c9c7b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
       },
-      "request":{
-        "method":"GET",
-        "header":[
+      "request": {
+        "method": "GET",
+        "header": [
           {
-            "key":"Content-Type",
-            "value":"application/json",
-            "type":"text"
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
           }
         ],
-        "body":{
-          "mode":"raw",
-          "raw":"\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
+        "body": {
+          "mode": "raw",
+          "raw": "\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
         },
-        "url":"http://localhost:8080/api/open-banking/v1.0/users"
+        "url": "http://localhost:8080/api/open-banking/v1.0/users/1/accounts"
       },
-      "response":[
-
-      ]
+      "response": []
     },
     {
-      "name":"POST_USER",
-      "id":"c711996c-c814-4b9d-b910-3d3d11fbc448",
-      "request":{
-        "method":"POST",
-        "header":[
+      "name": "GET_USERS",
+      "id": "1aa1857e-3a59-4de9-80e6-8cc65974250e",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
           {
-            "key":"Content-Type",
-            "value":"application/json",
-            "type":"text"
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
           }
         ],
-        "body":{
-          "mode":"raw",
-          "raw":"\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
+        "body": {
+          "mode": "raw",
+          "raw": "\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
         },
-        "url":"http://localhost:8080/api/open-banking/v1.0/users"
+        "url": "http://localhost:8080/api/open-banking/v1.0/users"
       },
-      "response":[
-
-      ]
+      "response": []
     },
     {
-      "name":"GET_USERBYID",
-      "id":"65f0f1f5-03f3-4eb4-8d93-a6204b4cdfc6",
-      "request":{
-        "method":"GET",
-        "header":[
-
-        ],
-        "url":"http://localhost:8080/api/open-banking/v1.0/users/1"
+      "name": "GET_USER",
+      "id": "82b9d7ae-ef08-44cf-8c7c-39712a581c0d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
       },
-      "response":[
-
-      ]
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
+        },
+        "url": "http://localhost:8080/api/open-banking/v1.0/users/1"
+      },
+      "response": []
+    },
+    {
+      "name": "POST_USER",
+      "id": "c711996c-c814-4b9d-b910-3d3d11fbc448",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
+        },
+        "url": "http://localhost:8080/api/open-banking/v1.0/users"
+      },
+      "response": []
+    },
+    {
+      "name": "GET_USERBYID",
+      "id": "65f0f1f5-03f3-4eb4-8d93-a6204b4cdfc6",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:8080/api/open-banking/v1.0/users/1"
+      },
+      "response": []
     }
   ]
 }

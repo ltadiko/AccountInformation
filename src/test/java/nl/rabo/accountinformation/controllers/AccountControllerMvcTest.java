@@ -1,14 +1,10 @@
 package nl.rabo.accountinformation.controllers;
 
 import nl.rabo.accountinformation.exceptions.AccountNotFoundException;
-import nl.rabo.accountinformation.exceptions.UserNotFoundException;
 import nl.rabo.accountinformation.models.AccountRequest;
-import nl.rabo.accountinformation.models.UserRequest;
 import nl.rabo.accountinformation.models.entity.AccountEntity;
-import nl.rabo.accountinformation.models.entity.UserEntity;
 import nl.rabo.accountinformation.models.enums.AccountCardType;
 import nl.rabo.accountinformation.models.enums.AccountStatus;
-import nl.rabo.accountinformation.models.enums.UserStatus;
 import nl.rabo.accountinformation.services.AccountService;
 import nl.rabo.accountinformation.utils.JsonConverterUtil;
 import org.junit.jupiter.api.DisplayName;
@@ -30,7 +26,6 @@ import java.time.Instant;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
-import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;

@@ -3,7 +3,7 @@
 
 # Account Information Service
 
-Account Information Services contains REST APIs related user, account , balances, cards , transactions and withdrawals
+Account Information Services contains REST APIs related to users, accounts , balances, cards , transactions and withdrawals
 
 
 # Which are not implemented (out of scope): 
@@ -21,7 +21,7 @@ The default application.yml uses H2 database
 1. Install Java19 & Maven3.8.6
 2. Clone the repo
    ```sh
-   git clone https://github.com/aiven-recruitment/Java-20221021-ltadiko.git
+   git clone https://github.com/ltadiko/AccountInformation.git
    ```
 3. mvn package
    ```sh
@@ -39,7 +39,10 @@ The default application.yml uses H2 database
 ### Things could be done 
 
 * Create more POJOs to separate entity models in Presentation layer
+* Adding REST links to each resource
+* Real Business validation on user status, card status...etc
 * Improve Test coverage
+* Mvc test cases for different HTTP codes
 * Implementing pipeline
 
 
@@ -48,26 +51,18 @@ The default application.yml uses H2 database
 
 Your Name - Lakshmaiah Tatikonda  - tlaxman88@gmail.com
 
-Project Link: https://github.com/aiven-recruitment/Java-20221021-ltadiko.git] (https://github.com/ltadiko/)
+Project Link: https://github.com/ltadiko/AccountInformation.git] (https://github.com/ltadiko/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### API Swagger documentation
 
-* Link to API documentation (http://localhost:8080/swagger-ui/index.html#/)
+* Link to API documentation (http://localhost:8080/swagger-ui/#/)
+* Link to generated swagger file http://localhost:8080/v2/api-docs
 
 ### DATABASE
 
 * Application uses in-memory h2 store (http://localhost:8080//h2-console)
+* Table queries and Initial data setup queries are mentioned in schema.sql
 
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Aiven for Apache Kafka®](https://docs.aiven.io/docs/products/kafka.html)
-* [PostgreSQL® welcome#](https://docs.aiven.io/docs/products/postgresql.html)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>

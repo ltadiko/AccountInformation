@@ -1,6 +1,7 @@
 package nl.rabo.accountinformation.controllers;
 
 import nl.rabo.accountinformation.models.TransactionRequest;
+import nl.rabo.accountinformation.models.entity.TransactionEntity;
 import nl.rabo.accountinformation.models.enums.TransactionType;
 import nl.rabo.accountinformation.services.TransactionService;
 import nl.rabo.accountinformation.utils.JsonConverterUtil;
@@ -19,13 +20,15 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoMoreInteractions;
+import static org.mockito.Mockito.*;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 @ExtendWith(SpringExtension.class)
@@ -76,6 +79,29 @@ class TransactionControllerMvcTest {
                 .getResponse();
         // then
         assertEquals(400, response.getStatus());
+        verifyNoMoreInteractions(transactionService);
+    }
+
+    @Test
+    @DisplayName("SHOULD return transaction details")
+    void getTransactions() throws Exception {
+        // given
+        Timestamp timeNow = Timestamp.from(Instant.now());
+        List<TransactionEntity> transactionEntityList = Arrays.asList(new TransactionEntity(1, 1, TransactionType.DEBIT, 10, "NL77rabo1234", 100, timeNow),
+                new TransactionEntity(1, 1, TransactionType.CREDIT, 10, "NL77rabo1234", 110, timeNow));
+        when(transactionService.getTransactions(anyLong(), any(), any())).thenReturn(transactionEntityList);
+        // when
+        MockHttpServletResponse response = mockMvc
+                .perform(get("/api/open-banking/v1.0/users/{userid}/accounts/{accountId}/transactions?fromDate=01.01.2021&toDate=01.12.2022", "1", "1")
+                        .accept(MediaType.APPLICATION_JSON_VALUE)
+                )
+                .andReturn()
+                .getResponse();
+        // then
+        List<TransactionEntity> transactionEntities = JsonConverterUtil.convertFromJson(response.getContentAsString(), List.class);
+        assertEquals(2, transactionEntities.size());
+        assertEquals(200, response.getStatus());
+        verify(transactionService).getTransactions(anyLong(), any(), any());
         verifyNoMoreInteractions(transactionService);
     }
 }
