@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: Rabobank Account Information
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.H2Dialect
+          #org.hibernate.dialect.H2Dialect
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+transaction:
+  creditCardTransactionCharges: 1.01
+
+withdrawal:
+  creditCardTransactionCharges: 1.01
