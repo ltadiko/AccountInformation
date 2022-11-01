@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.Optional;
 
 /**
- * @Author: Lakshmaiah Tatikonda
+ * @author: Lakshmaiah Tatikonda
  * Aspect Logging logs enter and exit logs of each api at Info level and each service entry and exit log at debug level
  */
 @Slf4j

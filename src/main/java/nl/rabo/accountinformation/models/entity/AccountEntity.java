@@ -1,6 +1,5 @@
 package nl.rabo.accountinformation.models.entity;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -16,7 +15,6 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @Builder
 @Getter
-@JsonInclude(JsonInclude.Include.NON_NULL)
 @Table(name = "ACCOUNTS")
 public class AccountEntity {
     @Id

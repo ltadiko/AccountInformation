@@ -6,17 +6,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class WithdrawalRequest {
+public class BalanceRequest {
+    @NotNull
+    private long accountId;
     @NotNull
     @Min(0)
-    private Double withdrawalAmount;
-    @NotEmpty
-    private String fromMachineNumber;
+    private Double accountBalance;
+
 }

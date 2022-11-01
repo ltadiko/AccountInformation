@@ -18,6 +18,10 @@ import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author : Lakshmaiah Tatikonda
+ * Withdrawal service implements managing withdrawal business logic by communicating with backend database
+ */
 @Service
 @Slf4j
 public class WithdrawalService {

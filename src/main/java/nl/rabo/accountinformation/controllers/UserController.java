@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
- * @Author: Lakshmaiah Tatikonda
+ * @author: Lakshmaiah Tatikonda
  * User controller contains user crud operations
  */
 

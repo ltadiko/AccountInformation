@@ -29,7 +29,8 @@ The default application.yml uses H2 database
     or
    * mvn compile exec:java -Dexec.mainClass=nl.rabo.accountinformation.AccountInformationApplication
     or
-   * docker build --quiet --build-arg ENVIRONMENT=local --tag latest . docker run -d -p 8080:8080 latest 
+   * docker build --quiet --build-arg ENVIRONMENT=local --tag latest .
+   * docker run -d -p 8080:8080 latest 
       ```
 
 ### Test API using postman
@@ -65,4 +66,8 @@ Project Link: https://github.com/ltadiko/AccountInformation.git] (https://github
 
 * Application uses in-memory h2 store (http://localhost:8080//h2-console)
 * Table queries and Initial data setup queries are mentioned in schema.sql
+  
+  ![Database](Database_Table_high_level_design.png "DB Relations")
 
+### Exception Handling
+![img.png](img.png)

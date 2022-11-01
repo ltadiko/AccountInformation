@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
- * @Author: Lakshmaiah Tatikonda
+ * @author: Lakshmaiah Tatikonda
  * Account controller contains account crud operations
  */
 
@@ -26,15 +26,23 @@ public class AccountController {
         this.accountService = accountService;
     }
 
-
+    /**
+     * @param userId : unique identifier of the user
+     * @return : List of account details of the userId
+     */
     @GetMapping(path = "/users/{userId}/accounts", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<AccountEntity> getUserAccounts(@PathVariable @NotNull Long userId) {
+    public List<AccountEntity> getUserAllAccounts(@PathVariable @NotNull Long userId) {
         return accountService.getUserAccounts(userId);
     }
 
+    /**
+     * @param userId    : Unique identifier of the user
+     * @param accountId : unique identifier of the account id
+     * @return : account details of the account id
+     */
     @GetMapping(path = "/users/{userId}/accounts/{accountId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public AccountEntity getUserAccounts(@PathVariable @NotNull Long userId,
-                                         @PathVariable @NotNull Long accountId) {
+    public AccountEntity getUserAccount(@PathVariable @NotNull Long userId,
+                                        @PathVariable @NotNull Long accountId) {
         return accountService.getAccount(userId, accountId);
     }
 

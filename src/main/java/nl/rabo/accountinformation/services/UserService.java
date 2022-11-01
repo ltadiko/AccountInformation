@@ -11,6 +11,10 @@ import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.List;
 
+/**
+ * @author : Lakshmaiah Tatikonda
+ * User service implements managing users business logic by communicating with backend database
+ */
 @Service
 public class UserService {
     private final UserRepository userRepository;

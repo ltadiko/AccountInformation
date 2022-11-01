@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @Author: Lakshmaiah Tatikonda
+ * @author: Lakshmaiah Tatikonda
  * Transaction controller contains transactions rest operations
  */
 

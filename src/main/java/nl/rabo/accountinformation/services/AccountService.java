@@ -10,6 +10,10 @@ import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.List;
 
+/**
+ * @author : Lakshmaiah Tatikonda
+ * Account service implements managing accounts business logic by communicating with backend database
+ */
 @Service
 public class AccountService {
     private final AccountRepository accountRepository;

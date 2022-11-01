@@ -1,6 +1,5 @@
 package nl.rabo.accountinformation.models.entity;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import nl.rabo.accountinformation.models.enums.CardStatus;
 import org.hibernate.annotations.OnDelete;
@@ -14,7 +13,6 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @Getter
 @Builder
-@JsonInclude(JsonInclude.Include.NON_NULL)
 @Table(name = "CARDS")
 public class CardEntity {
     @Id

@@ -14,6 +14,10 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author: Lakshmaiah Tatikonda
+ * Withdrawals controller contains post and get withdrawals api operations
+ */
 @RestController
 @RequestMapping("/api/open-banking/v1.0")
 @Validated
@@ -26,8 +30,7 @@ public class WithdrawalController {
 
 
     @GetMapping(path = "/users/{userId}/accounts/{accountId}/withdrawals", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<WithdrawalEntity> getTransactions(@PathVariable @NotNull Long userId,
-                                                  @PathVariable @NotNull Long accountId,
+    public List<WithdrawalEntity> getTransactions(@PathVariable @NotNull Long accountId,
                                                   @RequestParam @Nullable @DateTimeFormat(pattern = "dd.MM.yyyy") Date fromDate,
                                                   @RequestParam @Nullable @DateTimeFormat(pattern = "dd.MM.yyyy") Date toDate) {
         return withdrawalService.getWithdrawals(accountId, fromDate, toDate);

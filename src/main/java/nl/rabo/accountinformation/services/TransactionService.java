@@ -19,6 +19,10 @@ import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author : Lakshmaiah Tatikonda
+ * Transaction service implements managing transactions business logic by communicating with backend database
+ */
 @Service
 @Slf4j
 public class TransactionService {
@@ -43,7 +47,7 @@ public class TransactionService {
     public void addTransaction(TransactionRequest transactionRequest, final long userId, final long accountId) {
         BalanceEntity balanceEntity = balanceRepository.findByAccountId(accountId);
         double newAccountBalance;
-        double calculatedTransactionAmount = 0;
+        double calculatedTransactionAmount;
 
         if (TransactionType.DEBIT == transactionRequest.getTransactionType()) {
             AccountCardType accountCardType = balanceEntity.getAccountEntity().getAccountCardType();

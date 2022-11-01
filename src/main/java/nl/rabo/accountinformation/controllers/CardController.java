@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
- * @Author: Lakshmaiah Tatikonda
+ * @author: Lakshmaiah Tatikonda
  * Account card controller contains card apis
  */
 
@@ -27,8 +27,7 @@ public class CardController {
     }
 
     @GetMapping(path = "/users/{userId}/accounts/{accountId}/cards", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<CardEntity> getUserAccountCards(@PathVariable @NotNull Long userId,
-                                                @PathVariable @NotNull Long accountId) {
+    public List<CardEntity> getUserAccountCards(@PathVariable @NotNull Long accountId) {
         return cardService.getCards(accountId);
     }
 
@@ -37,7 +36,7 @@ public class CardController {
         return cardService.getUserAccountAndCards(userId);
     }
 
-    @PostMapping(path = "/users/{userId}/accounts/{accountId}/cars", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/users/{userId}/accounts/{accountId}/cards", produces = MediaType.APPLICATION_JSON_VALUE)
     public void addUser(@RequestBody @Valid CardRequest cardRequest,
                         @PathVariable @NotNull Long accountId) {
         cardService.addCard(cardRequest, accountId);

@@ -10,6 +10,10 @@ import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.List;
 
+/**
+ * @author : Lakshmaiah Tatikonda
+ * cards service implements managing cards business logic by communicating with backend database
+ */
 @Service
 public class CardService {
     private final CardRepository cardRepository;
