@@ -87,6 +87,26 @@
           "mode": "raw",
           "raw": "\n    {\n        \"userId\": 2,\n        \"firstName\": \"Rakesh\",\n        \"lastName\": \"Singh\",\n        \"status\": \"ACTIVE\",\n        \"email\": \"test@gmail.com\",\n        \"createdDate\": \"2022-10-29T10:52:22.560+00:00\",\n        \"lastModifiedDate\": \"2022-10-29T10:52:22.560+00:00\"\n    }\n"
         },
+        "url": "http://localhost:8080/api/open-banking/v1.0/accounts/1/balances"
+      },
+      "response": []
+    },
+    {
+      "name": "POST_ACCOUNT_BALANCE",
+      "id": "1452fca0-53d1-48ac-b10e-367f797b3f66",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\n    {\n        \"accountId\": 1,\n        \"accountBalance\": -3\n    }\n"
+        },
         "url": "http://localhost:8080/api/open-banking/v1.0/users/1/accounts/1/balances"
       },
       "response": []
