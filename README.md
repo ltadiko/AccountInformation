@@ -7,8 +7,8 @@ Account Information Services contains REST APIs related to users, accounts , bal
 
 
 # Which are not implemented (out of scope): 
-Authentication & Authorizations
-Deployment
+* Authentication & Authorizations
+* Deployment
 
 
 ### Prerequisites to run the application
