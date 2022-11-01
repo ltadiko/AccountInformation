@@ -13,8 +13,8 @@ Account Information Services contains REST APIs related to users, accounts , bal
 
 ### Prerequisites to run the application
 
-Configure application.yml 
-The default application.yml uses H2 database 
+* Configure application.yml 
+* The default application.yml uses H2 database 
 
 ### Installation
 
